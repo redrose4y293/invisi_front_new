@@ -1,0 +1,67 @@
+:root {
+  /* Brand palette */
+  --color-bg: #00264D;            /* Deep navy */
+  --color-surface: #0b2f5a;        /* Slightly lighter navy for surfaces */
+  --color-elev: #113a70;           /* Elevated surface */
+  --color-border: #5E5E5E;         /* Tungsten gray */
+  --color-text: #C5C6C7;           /* Silver-gray */
+  --color-text-dim: #aeb0b2;       /* Dimmed text */
+  --color-primary: #1A73E8;        /* Metallic blue accent */
+  --color-bg-gradient: linear-gradient(180deg, #0b1f3a 0%, #162a4b 60%, #0b1f3a 100%);
+  /* Dark panel system (no cream) */
+  --color-panel: #0B121B;          /* Dark navy panel */
+  --color-panel-border: #1b2836;   /* Panel border */
+  --color-brand-red: #8E1E22;      /* Brand red top bar */
+  --color-gold: #D7A333;           /* Gold outline */
+  --radius: 12px;
+  --shadow: 0 12px 30px rgba(0,0,0,0.35);
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-bg-gradient);
+  color: var(--color-text);
+  font-family: 'Open Sans', ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.card {
+  background: var(--color-panel);
+  border: 1px solid var(--color-panel-border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+}
+
+.header, .footer {
+  background: var(--color-bg-gradient);
+}
+.footer { border-top: 2px solid var(--color-gold); border-bottom: none; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
+.nav a {
+  color: var(--color-text);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.nav a:hover { background: rgba(255,255,255,0.06); }
